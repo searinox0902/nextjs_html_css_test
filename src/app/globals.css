@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +18,225 @@
   }
 }
 
+
+
+
+/* ui components */
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  @apply uppercase   text-white font-extrabold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  @apply leading-loose font-normal text-xl;
+  font-weight: 400 !important;
+  font-family: 'Outfit', sans-serif; 
+}
+
+button {
+  @apply px-10 py-5 text-black block w-auto my-6 rounded-2xl uppercase relative;
+  background: linear-gradient(180deg, #FECB48 0%, #F7B100 100%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+button.btn_sharp::before{
+  content: '';
+  background-image: url('./../../public/btn_sharp.png');
+  @apply block absolute w-16 h-10 bg-center bg-no-repeat bg-contain left-[-50px] bottom-[-40px] ;
+}
+
+
+/* custom class */
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url('./../../public/bg_main.jpg');
+  @apply relative bg-cover bg-no-repeat;
+}
+
+body * {
+  @apply z-10 relative;
+}
+
+
+
+body::after {
+  content: '';
+  background-image: url('./../../public/stairs.webp');
+  @apply bg-no-repeat bg-cover absolute top-0 left-0 w-full min-h-screen block z-0 animate-pulse;
+}
+
+.home {
+  @apply px-2 sm:px-0 mx-auto max-w-xs sm:max-w-8xl flex min-h-screen items-center justify-between;
+}
+
+.home__wrapper{
+  @apply w-full sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl 3xl:max-w-8xl flex flex-col sm:flex-row mx-auto sm:h-auto;
+}
+
+.home__text {
+  @apply sm:block sm:w-1/2 m-auto  pt-24 sm:pt-44 lg:pt-48 pb-16 h-auto;
+}
+
+.home__text button {
+  @apply fade-lg mx-auto sm:mx-0;
+}
+
+.home__image {
+  @apply max-w-xs sm:max-w-8xl sm:w-1/2 lg:min-h-screen flex items-end fade-xl;
+}
+
+.home__image figure {
+  @apply w-full mx-auto relative stairs;
+}
+
+.home__image img {
+  @apply mx-auto w-full  md:max-w-[350px] xl:max-w-[75%] 3xl:max-w-[75%]
+}
+
+.home h1 {
+  @apply mb-4 text-4xl xl:text-[70px] md:text-[50px] leading-tight  lg:leading-[54px] xl:leading-[84px];
+}
+
+.home p {
+  @apply text-white ;
+}
+
+.ellipse{
+  @apply relative;
+  z-index: 15;
+}
+
+.ellipse {
+  @apply px-4  bg-center bg-no-repeat bg-contain;;
+  background-image: url('./../../public/ellipse.png');
+  transform: scale(1.2);
+}
+
+
+.stairs::before {
+  content: '';
+  background-image: url('./../../public/stairs.svg');
+  @apply px-4 bg-center bg-no-repeat bg-contain absolute right-[-10px] bottom-[40px] w-16 h-16;
+}
+
+
+/* header */ 
+
+.header{
+  @apply w-full mx-auto sm:absolute z-50 left-0 right-0  flex flex-col sm:flex-row items-center  sm:gap-8 justify-between pt-4 px-4 sm:px-0 max-w-lg lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl 3xl:max-w-8xl;
+}
+
+.header nav {
+  @apply text-white py-8 flex gap-12;
+}
+
+.header a {
+  @apply text-white hover:text-yellow-primary;
+  font-family: 'Outfit', sans-serif; 
+}
+
+.heacer__btn {
+  @apply border-2 border-yellow-primary rounded-2xl py-3 px-5 hover:bg-yellow-primary hover:text-black text-center;
+}
+
+/* Table Section */
+
+.table-section{
+  @apply px-4 pt-36 mx-auto max-w-5xl;
+}
+
+.table-section h1 {
+  @apply text-2xl xl:text-[54px] text-white text-center mb-12 fade-sm;
+}
+
+.table-section .rdt_TableHeadRow div {
+  @apply font-bold uppercase !important;
+}
+
+/* Animations */
+
+.stairs::before{
+  animation: topToBottom 2.5s infinite ease-in-out;
+}
+
+.btn_sharp::before{
+  animation: sharpAnimaton 2.5s infinite ease-in-out;
+}
+
+.ellipse {
+  animation: .6s pulse ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+   opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}
+
+
+@keyframes topToBottom {
+  0% {
+    transform:  translate(0px, -10px);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+  }
+
+  100% {
+    transform: translate(0px, -10px);
+  }
+}
+
+@keyframes sharpAnimaton {
+  0% {
+    transform:  translate(0px, -10px);
+  }
+
+  50% {
+    transform: translate(-4px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, -10px);
+  }
+}
+
+.fade-sm {
+  animation: fade 0.5s ease-in;
+}
+
+.fade-md {
+  animation: fade .85s ease-in;
+}
+
+.fade-lg {
+  animation: fade .1s ease-in;
+}
+
+.fade-xl {
+  animation: fade .1.2s ease-in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
