@@ -10,7 +10,7 @@ const Navigation = () => {
             <header className="header">
                 <figure>
                     <img
-                        src="/nextjs_html_css_test/logo.png"
+                        src="/logo.png"
                         alt="Virgin imagen"
                         className='m-auto'
                     >
