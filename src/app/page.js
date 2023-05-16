@@ -21,7 +21,7 @@ export default function Home() {
           <div className='home__image'>
             <figure>
               <img
-                src="/virgin.webp"
+                src="/nextjs_html_css_test/virgin.webp"
                 alt="Virgin imagen"
                 className='w-full'
               >
