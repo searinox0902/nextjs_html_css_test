@@ -1,6 +1,3 @@
-import Image from 'next/image'
-
-
 export default function Home() {
   return (
     <>
@@ -23,13 +20,12 @@ export default function Home() {
 
           <div className='home__image'>
             <figure>
-              <Image
+              <img
                 src="/virgin.webp"
                 alt="Virgin imagen"
-                width={512}
-                height={647}
+                className='w-full'
               >
-              </Image>
+              </img>
             </figure>
           </div>
         </section>

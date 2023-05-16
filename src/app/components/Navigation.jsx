@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import React from 'react'
 
 
@@ -10,14 +9,12 @@ const Navigation = () => {
 
             <header className="header">
                 <figure>
-                    <Image
+                    <img
                         src="/logo.png"
                         alt="Virgin imagen"
-                        width={63}
-                        height={62}
-                        priority
+                        className='w-full'
                     >
-                    </Image>
+                    </img>
                 </figure>
 
                 <nav>
