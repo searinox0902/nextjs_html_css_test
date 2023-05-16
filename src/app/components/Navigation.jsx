@@ -26,7 +26,7 @@ const Navigation = () => {
                     <Link href="/registrados"> Registrados</Link>
                 </nav>
 
-                <Link href="/" className="heacer__btn"> Ver en opensea</Link>
+                <Link href="/" className="header__btn"> Ver en opensea</Link>
             </header>
         </>
 

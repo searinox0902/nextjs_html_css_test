@@ -140,8 +140,8 @@ body::after {
   font-family: 'Outfit', sans-serif; 
 }
 
-.heacer__btn {
-  @apply border-2 border-yellow-primary rounded-2xl py-3 px-5 hover:bg-yellow-primary hover:text-black text-center;
+.header__btn {
+  @apply border-2 border-yellow-primary rounded-2xl py-3 px-5 hover:bg-yellow-primary hover:text-black text-center !important;
 }
 
 /* Table Section */
