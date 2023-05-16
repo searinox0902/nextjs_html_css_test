@@ -16,7 +16,6 @@ const Navigation = () => {
                         width={63}
                         height={62}
                         priority
-                        className='m-auto'
                     >
                     </Image>
                 </figure>

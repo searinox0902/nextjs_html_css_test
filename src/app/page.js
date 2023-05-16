@@ -28,7 +28,6 @@ export default function Home() {
                 alt="Virgin imagen"
                 width={512}
                 height={647}
-                priority
               >
               </Image>
             </figure>
