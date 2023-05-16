@@ -10,7 +10,7 @@ const Navigation = () => {
             <header className="header">
                 <figure>
                     <img
-                        src="nextjs_html_css_test/logo.png"
+                        src="/nextjs_html_css_test/logo.png"
                         alt="Virgin imagen"
                         className='m-auto'
                     >
@@ -18,11 +18,11 @@ const Navigation = () => {
                 </figure>
 
                 <nav>
-                    <Link href="/nextjs_html_css_test/"> Inicio</Link>
-                    <Link href="/nextjs_html_css_testregistrados/"> Registrados</Link>
+                    <Link href="/"> Inicio</Link>
+                    <Link href="/registrados"> Registrados</Link>
                 </nav>
 
-                <Link href="/nextjs_html_css_test/" className="header__btn"> Ver en opensea</Link>
+                <Link href="/#" className="header__btn"> Ver en opensea</Link>
             </header>
         </>
 
