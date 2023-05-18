@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react'
-import CustomTable from './../components/CustomTable'
+import CustomTable from '../components/CustomTable'
+import Link from 'next/link';
 
 const Registrados = () => {
 
