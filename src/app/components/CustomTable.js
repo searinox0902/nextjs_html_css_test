@@ -38,6 +38,7 @@ const CustomTable = () => {
 
     const handleEdit = () => {
         if(selectedRows.length > 1){
+            alert('selecciona solo un registro para editar');
             return;
         }
         const idSelected = selectedRows[0].id;
