@@ -38,7 +38,7 @@ p {
   font-family: 'Outfit', sans-serif; 
 }
 
-button {
+button, .btn {
   @apply px-10 py-5 text-black block w-auto my-6 rounded-2xl uppercase relative;
   background: linear-gradient(180deg, #FECB48 0%, #F7B100 100%);
   font-family: 'Montserrat', sans-serif;
